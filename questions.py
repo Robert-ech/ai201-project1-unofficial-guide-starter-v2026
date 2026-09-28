@@ -22,12 +22,26 @@ names a target of "4 of 5", and four of three is not a thing.
 """
 
 QUESTIONS = [
-    # {"question": "...", "expects": "..."},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
-    {"question": "", "expects": ""},
+    # thread_roommate_conflict.txt — top reply says talk to the RA first.
+    {"question": "What do I do when I have a conflict with my roommate?",
+     "expects": "RA"},
+
+    # thread_bike_commute.txt — the replies disagree on "worth it", but all
+    # of them land on storage as the catch.
+    {"question": "Is a bike worth a short commute?",
+     "expects": "storage"},
+
+    # thread_first_gen.txt — yes, and it's run by the advising office.
+    {"question": "Is there a first-generation program?",
+     "expects": "advising office"},
+
+    # thread_professor_email.txt — the rule of thumb is a 48 hour wait.
+    {"question": "Do professors answer emails?",
+     "expects": "48 hours"},
+
+    # thread_study_spots.txt — Ridgeway Cafe before 10am is the top answer.
+    {"question": "What are good study spots besides the library?",
+     "expects": "Ridgeway"},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.

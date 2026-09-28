@@ -55,43 +55,29 @@ in at least 4 of 5 tries.
 
 ---
 
-## 4. Something about your chunks
+## 4. Chunks are small enough to hold one answer
 
-<!-- YOU WRITE THIS ONE.
-
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
-
-
+When I run `python app.py chunks -n 5`, at least 4 of the 5 chunks shown
+start with the `THREAD:` title line and contain no more than 2 replies.
 
 **Why this target:**
+Right now every chunk is an entire thread (26 chunks for 26 files). When I
+ran `chunks -n 5`, all 5 had the title but all 5 had 3 or more replies, so
+this scores 0 of 5 today. The title requirement keeps a reply like
+"Counterpoint, I sold mine" from losing its context; the 2-reply cap stops a
+question about bike registration from dragging in three replies about salt
+and storage.
 
+## 5. Answers cite the correct source
 
-
----
-
-## 5. Your choice
-
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
-
-
+For at least 4 of my 5 test questions, the source document named in the
+answer is the file that contains the ground-truth reply.
 
 **Why this target:**
-
-
+Traceability matters to me: a citation is only useful if I can open the file
+and find the claim. Criterion 2 checks that *a* source is named; this checks
+it's the right one. I set 4 of 5 because the study spots question may pull
+from more than one thread, and I want to allow for that.
 
 ---
 
